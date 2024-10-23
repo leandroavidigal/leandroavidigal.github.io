@@ -8,41 +8,39 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #000; /* Fundo preto */
+            color: #f4f4f4; /* Texto branco */
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
         header {
-            background-color: #0073e6;
+            background-color: #0073e6; /* Azul brilhante */
             color: white;
-            padding: 1em 0;
+            padding: 1.5em;
             text-align: center;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            animation: slideDown 1.5s ease-out;
         }
         .content {
             max-width: 900px;
             margin: 2em auto;
-            padding: 1em;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            font-weight: bold;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
+            padding: 2em;
+            background-color: #111; /* Fundo escuro */
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in;
         }
         h2 {
-            font-size: 1.75em;
-            margin-top: 1.5em;
+            font-weight: bold;
+            color: #0073e6; /* Azul brilhante */
+            text-transform: uppercase;
+            animation: fadeInLeft 1s ease-in-out;
         }
-        .section-title {
-            margin-bottom: 1.5em;
-        }
-        p {
-            line-height: 1.6;
+        p, li {
+            line-height: 1.8;
+            font-size: 1.1em;
         }
         .skills-list, .experience-list {
             list-style: none;
@@ -51,25 +49,62 @@
         .skills-list li, .experience-list li {
             margin-bottom: 1em;
         }
-        .btn {
-            margin-right: 1em;
+        .btn-custom {
+            background-color: #0073e6;
+            color: white;
+            margin-right: 10px;
+            transition: background-color 0.3s ease-in-out;
+            text-transform: uppercase;
+        }
+        .btn-custom:hover {
+            background-color: #005bb5;
         }
         footer {
             background-color: #0073e6;
             color: white;
             text-align: center;
-            padding: 2em 0;
+            padding: 1.5em 0;
             margin-top: 2em;
+            animation: slideUp 1.5s ease-out;
         }
         footer p {
             margin-bottom: 0;
+        }
+        footer a {
+            color: white;
+            margin: 0 10px;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Links Sociais */
+        .social-icons a {
+            font-size: 1.5em;
+            color: white;
+            margin: 0 15px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Leandro Vidigal - Data Engineer & Data Scientist</h1>
+        Leandro Vidigal - Data Engineer & Data Scientist
     </header>
 
     <div class="content">
@@ -81,41 +116,40 @@
 
         <section id="experience">
             <h2>Experiência Profissional</h2>
-            <p>Como engenheiro e cientista de dados com mais de 12 anos de experiência profissional, dos quais 5 anos são dedicados à área de ciência de dados, minha expertise vai muito além da manipulação de dados. Sou especializado em resolver problemas complexos e reais por meio de técnicas avançadas de estatística e modelagem matemática.</p>
-            <p>Tendo trabalhado em empresas líderes da indústria, como Yamaha e Samsung, atualmente aplico meu conhecimento na PowerOfData, onde foco na entrega de soluções de dados inovadoras que impulsionam a eficiência operacional, a otimização de processos e a inovação tecnológica.</p>
-            <p>Na PowerOfData, sou responsável pelo desenvolvimento e execução de processos completos de ETL em ambientes AWS e GCP, garantindo a coleta e transformação eficiente de dados de múltiplas fontes. Construí pipelines de dados automatizados utilizando Python e SQL, que mantêm a integridade e a qualidade dos dados em todas as etapas do fluxo de trabalho. Além disso, implemento funcionalidades para modelos de machine learning que otimizam processos empresariais e fornecem insights acionáveis em tempo real.</p>
-            <p>Em colaboração com equipes ágeis, utilizo Jira e Confluence para o gerenciamento de projetos, enquanto o Bitbucket é empregado para versionamento de código e colaboração. Também trabalho com Power BI e DBT para criar soluções analíticas avançadas que auxiliam na tomada de decisões estratégicas. Minha função envolve, de maneira consistente, a resolução de problemas complexos de dados e a obtenção de resultados impactantes.</p>
-            <p>Com uma sólida formação em matemática aplicada e estatística, tenho a capacidade de transformar dados complexos em insights poderosos. Descubro padrões ocultos, aplico técnicas de machine learning e utilizo modelagem preditiva para abordar causas raiz e prever comportamentos futuros. Minha abordagem não apenas resolve problemas imediatos, mas também prepara o caminho para ganhos estratégicos de longo prazo.</p>
-            <p>Como um profissional dedicado ao aprendizado contínuo, vejo novos desafios como oportunidades para aprimorar minhas habilidades e gerar valor significativo para os negócios.</p>
+            <p>Como engenheiro e cientista de dados com mais de 12 anos de experiência, dos quais 5 anos dedicados à ciência de dados, sou especializado em resolver problemas complexos e reais por meio de técnicas avançadas de estatística e modelagem matemática.</p>
+            <p>Atualmente aplico meu conhecimento na PowerOfData, onde foco na entrega de soluções de dados inovadoras que impulsionam a eficiência operacional, a otimização de processos e a inovação tecnológica.</p>
+            <p>Na PowerOfData, sou responsável pelo desenvolvimento e execução de processos completos de ETL em ambientes AWS e GCP, garantindo a coleta e transformação eficiente de dados de múltiplas fontes, além de implementar funcionalidades para modelos de machine learning que otimizam processos empresariais e fornecem insights acionáveis em tempo real.</p>
         </section>
 
         <section id="skills">
             <h2>Habilidades Técnicas</h2>
             <ul class="skills-list">
-                <li><strong>Engenharia de Dados:</strong> Desenvolvimento e otimização de pipelines de dados em ambientes Cloud (AWS, GCP); automação com CI/CD (Docker, Kubernetes, Jenkins).</li>
-                <li><strong>Big Data:</strong> Processamento e análise de grandes volumes de dados utilizando Hadoop, Spark e Kafka.</li>
-                <li><strong>Machine Learning:</strong> Desenvolvimento de modelos preditivos com Python (Pandas, NumPy, Scikit-learn); implementação de pipelines de ML em produção.</li>
-                <li><strong>Análise Estatística:</strong> Aplicação de estatística descritiva e inferencial; técnicas avançadas como regressão, teste de hipóteses e ANOVA.</li>
-                <li><strong>Análise e Visualização de Dados:</strong> Criação de dashboards dinâmicos com Power BI e Python (Matplotlib, Seaborn); geração de insights para decisões baseadas em dados.</li>
-                <li><strong>Bancos de Dados:</strong> Modelagem e consultas avançadas em bancos de dados SQL (PostgreSQL, MySQL, Redshift) e NoSQL.</li>
-                <li><strong>Computação em Nuvem:</strong> Experiência com AWS (Redshift, S3, Lambda) e GCP (BigQuery, Dataflow).</li>
-                <li><strong>Orquestração e ETL:</strong> Gestão de pipelines de dados com Airflow, DBT e ferramentas de automação.</li>
-                <li><strong>Metodologias Ágeis:</strong> Uso de Scrum para gestão de projetos e equipes.</li>
+                <li><strong>Engenharia de Dados:</strong> Desenvolvimento de pipelines de dados em ambientes Cloud (AWS, GCP); automação com CI/CD (Docker, Kubernetes, Jenkins).</li>
+                <li><strong>Big Data:</strong> Processamento de grandes volumes de dados com Hadoop, Spark e Kafka.</li>
+                <li><strong>Machine Learning:</strong> Desenvolvimento de modelos preditivos com Python (Pandas, NumPy, Scikit-learn); pipelines de ML em produção.</li>
+                <li><strong>Análise e Visualização:</strong> Dashboards dinâmicos com Power BI e Python; insights para decisões baseadas em dados.</li>
+                <li><strong>Bancos de Dados:</strong> Consultas avançadas em SQL (PostgreSQL, MySQL, Redshift) e NoSQL.</li>
+                <li><strong>Nuvem:</strong> AWS (Redshift, S3) e GCP (BigQuery, Dataflow).</li>
+                <li><strong>ETL e Orquestração:</strong> Airflow, DBT e ferramentas de automação.</li>
+                <li><strong>Metodologias Ágeis:</strong> Scrum para gestão de projetos e equipes.</li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contato</h2>
-            <p>Estou sempre aberto a novas oportunidades e colaborações na área de Ciência de Dados. Se você está interessado em meu trabalho ou deseja discutir projetos potenciais, sinta-se à vontade para entrar em contato.</p>
-            <a href="mailto:leandro@example.com" class="btn btn-primary">Entre em contato</a>
+            <p>Estou sempre aberto a novas oportunidades e colaborações. Se você deseja discutir projetos ou saber mais sobre meu trabalho, entre em contato!</p>
+            <a href="mailto:leandro.vidigal@outlook.com" class="btn btn-custom">Entre em contato</a>
         </section>
     </div>
 
     <footer>
         <p>Siga-me nas redes sociais:</p>
-        <a href="https://github.com/leandroavidigal" class="btn btn-dark">GitHub</a>
-        <a href="https://www.linkedin.com/in/leandroavidigal" class="btn btn-dark">LinkedIn</a>
-        <a href="mailto:leandro@example.com" class="btn btn-dark">E-mail</a>
+        <div class="social-icons">
+            <a href="https://github.com/leandroavidigal" class="btn btn-dark">GitHub</a>
+            <a href="https://www.linkedin.com/in/leandrovidigal/" class="btn btn-dark">LinkedIn</a>
+            <a href="https://medium.com/@leandro.vidigal" class="btn btn-dark">Medium</a>
+        </div>
+        <p>&copy; 2024 Leandro Vidigal</p>
     </footer>
 
 </body>
