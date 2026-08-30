@@ -1,0 +1,1 @@
+Leandro Vidigal — IA aplicada a processos de escritorio. Pagina publicada em https://leandroavidigal.github.io Fonte: index.html (arquivo unico, sem build). Agendamento: https://cal.com/leandrovidigal/diagnostico
